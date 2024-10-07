@@ -28,7 +28,7 @@
             <div class="w-full md:w-2/3 lg:1/3">
                 @yield('content')
             </div>
-        </main
+        </main>
 
     </div>
 </body>
