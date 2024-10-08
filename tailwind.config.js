@@ -14,6 +14,16 @@ export default {
             jet: '#292E2B',
             night: '#0B0C0D',
         },
+        fontFamily: {
+            heading: ['Oswald', 'sans-serif'],
+            body: ['Oswald', 'sans-serif'],
+            button: ['Josefin Sans', 'sans-serif'],
+        },
+        fontSize: {
+            'heading': '5.375rem',
+            'body': '1.667rem',
+            'button': '1.338rem',
+        }
     },
   },
   plugins: [],

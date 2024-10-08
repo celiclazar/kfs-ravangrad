@@ -1,12 +1,12 @@
-<aside class="hidden lg:block lg:w-64 bg-gray-800 text-white">
+<aside class="lg:block md:w-full bg-night text-silver h-screen">
     <div class="p-4">
-        <h2 class="text-xl font-semibold">Sidebar Menu</h2>
+        <h2 class="text-xl font-semibold">KFS Ravangrad</h2>
         <ul class="mt-4">
             <li class="py-2">
                 <a href="#" class="hover:bg-gray-700 p-2 block rounded">Dashboard</a>
             </li>
             <li class="py-2">
-                <a href="#" class="hover:bg-gray-700 p-2 block rounded">Liga</a>
+                <a href="/admin/league" class="hover:bg-gray-700 p-2 block rounded">Liga</a>
             </li>
             <li class="py-2">
                 <a href="#" class="hover:bg-gray-700 p-2 block rounded">Statistika</a>
@@ -26,6 +26,14 @@
             <li class="py-2">
                 <a href="#" class="hover:bg-gray-700 p-2 block rounded">Obaveštenja</a>
             </li>
+            <li class="py-2">
+                <a href="#"
+                   onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
+                   class="hover:bg-gray-700 p-2 block rounded">Logout</a>
+            </li>
         </ul>
     </div>
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
+        @csrf
+    </form>
 </aside>

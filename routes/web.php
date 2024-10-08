@@ -17,4 +17,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', function () {
         return view('pages.users.dashboard');
     })->name('home');
+
+    Route::middleware(['role:member|admin|super-admin'])->prefix('admin')->group(function () {
+        Route::get('/league', [App\Http\Controllers\LeagueController::class, 'index'])->name('league');
+        Route::get('/league/add-round', [App\Http\Controllers\LeagueController::class, 'addRound'])->name('league.add-round');
+    });
 });

@@ -1,8 +1,11 @@
 <template>
-    <ul class="flex flex-col h-14 bg-darkGreen md:flex-row md:space-x-4">
-        <guest-links v-if="!isAuthenticated" />
-        <auth-links v-else :user="user" />
-    </ul>
+    <div class="flex flex-row h-16 justify-end font-heading text-2xl text-silver bg-darkGreen">
+        <ul class="h-full bg-darkGreen md:flex-row md:space-x-4">
+            <guest-links v-if="!isAuthenticated" />
+            <auth-links v-else :user="user" />
+        </ul>
+    </div>
+
 </template>
 
 <script>
@@ -31,5 +34,5 @@ export default {
 </script>
 
 <style scoped>
-/* Add any necessary component-specific styles */
+
 </style>
