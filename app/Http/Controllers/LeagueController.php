@@ -12,4 +12,15 @@ class LeagueController extends Controller
         return view('pages.league.index');
     }
 
+    public function create()
+    {
+        return view('pages.league.add');
+    }
+
+    public function store(Request $request)
+    {
+        $file = $request->file('file');
+        dd(json_decode($file));
+    }
+
 }

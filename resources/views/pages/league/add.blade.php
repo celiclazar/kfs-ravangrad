@@ -5,7 +5,9 @@
 @endsection
 
 @section('content')
-    <div>Ovde ću izlistati sve lige (sezone) do sada</div>
+    <div>
+        Ovo će biti deo gde se dodaju pizdarije
+    </div>
 @endsection
 
 @section('content-header')

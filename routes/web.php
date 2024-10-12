@@ -20,6 +20,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::middleware(['role:member|admin|super-admin'])->prefix('admin')->group(function () {
         Route::get('/league', [App\Http\Controllers\LeagueController::class, 'index'])->name('league');
-        Route::get('/league/add-round', [App\Http\Controllers\LeagueController::class, 'addRound'])->name('league.add-round');
+        Route::get('/league/create', [App\Http\Controllers\LeagueController::class, 'create'])->name('league.create');
+        Route::get('/league/test', [App\Http\Controllers\LeagueController::class, 'test'])->name('league.test');
     });
 });
