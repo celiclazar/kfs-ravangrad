@@ -25,7 +25,7 @@
                     @yield('sidebar')
                 </div>
                 <div class="flex flex-col w-full md:w-3/4 lg:w-4/5">
-                    <div class="bg-silver h-16">
+                    <div class="bg-silver h-24 md:h-16">
                         @yield('content-header')
                     </div>
                     <div class="bg-silver w-full h-screen">
