@@ -3,8 +3,13 @@
         <h2 class="text-xl font-semibold">KFS Ravangrad</h2>
         <ul class="mt-4">
             <li class="py-2">
-                <a href="#" class="hover:bg-gray-700 p-2 block rounded">Dashboard</a>
+                <a href="/home" class="hover:bg-gray-700 p-2 block rounded">Dashboard</a>
             </li>
+            @if(auth()->user()->hasRole('super-admin'))
+                <li class="py-2">
+                    <a href="{{route('users.index')}}" class="hover:bg-gray-700 p-2 block rounded">Users</a>
+                </li>
+            @endif
             <li class="py-2">
                 <a href="/admin/league" class="hover:bg-gray-700 p-2 block rounded">Liga</a>
             </li>

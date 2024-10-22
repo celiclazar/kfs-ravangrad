@@ -18,8 +18,14 @@ Route::middleware(['auth'])->group(function () {
         return view('pages.users.dashboard');
     })->name('home');
 
+    Route::middleware(['role:super-admin'])->prefix('admin')->group(function () {
+       Route::get('/users', [App\Http\Controllers\UserManagement\UserController::class, 'index'])->name('users.index');
+       Route::get('/users/roles', [App\Http\Controllers\UserManagement\UserRolesController::class, 'index'])->name('users.roles');
+    });
+
     Route::middleware(['role:member|admin|super-admin'])->prefix('admin')->group(function () {
         Route::get('/league', [App\Http\Controllers\LeagueController::class, 'index'])->name('league');
-        Route::get('/league/add-round', [App\Http\Controllers\LeagueController::class, 'addRound'])->name('league.add-round');
+        Route::get('/league/create', [App\Http\Controllers\LeagueController::class, 'create'])->name('league.create');
+        Route::get('/league/test', [App\Http\Controllers\LeagueController::class, 'test'])->name('league.test');
     });
 });
