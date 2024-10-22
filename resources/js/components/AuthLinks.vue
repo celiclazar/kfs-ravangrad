@@ -1,7 +1,20 @@
 <template>
     <li class="flex flex-col items-center h-full md:hidden">
         <a @click="toggleDropdown" class="p-4 text-silver hover:text-slate-400 uppercase " role="button">
-            Menu
+            <svg
+                class="w-6 h-6 text-silver hover:text-gray-400"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16m-7 6h7"
+                />
+            </svg>
         </a>
         <div v-if="dropdownOpen" class="absolute right-4 top-10 w-56 bg-night text-silver rounded-md shadow-lg border border-darkGreen z-20">
             <div class="px-4 py-2 rounded-t-lg">
