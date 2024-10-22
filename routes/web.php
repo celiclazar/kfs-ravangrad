@@ -20,6 +20,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::middleware(['role:super-admin'])->prefix('admin')->group(function () {
        Route::get('/users', [App\Http\Controllers\UserManagement\UserController::class, 'index'])->name('users.index');
+       Route::get('/users/roles', [App\Http\Controllers\UserManagement\UserRolesController::class, 'index'])->name('users.roles');
     });
 
     Route::middleware(['role:member|admin|super-admin'])->prefix('admin')->group(function () {

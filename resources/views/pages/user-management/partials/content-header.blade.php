@@ -2,8 +2,8 @@
     <a href={{url('/week/add')}} class="text-black">
         Permisije
     </a>
-    <a href={{url('/week/add')}} class="text-black">
-        Role
+    <a href={{route('users.roles')}} class="text-black">
+        ROLES
     </a>
     <a href={{url('/week/add')}} class="text-black">
         User
