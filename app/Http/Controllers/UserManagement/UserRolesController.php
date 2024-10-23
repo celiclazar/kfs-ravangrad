@@ -13,9 +13,17 @@ class UserRolesController extends Controller
 {
     public function index()
     {
-        Collection: $roles = Role::all()->pluck('name');
+        Collection: $roles = Role::all();
         return view('pages.user-management.roles.index', [
             'roles' => $roles
+        ]);
+    }
+
+    public function edit(Request $request, int $id)
+    {
+        $role = Role::findById($id);
+        return view('pages.user-management.roles.edit', [
+            'role' => $role
         ]);
     }
 }

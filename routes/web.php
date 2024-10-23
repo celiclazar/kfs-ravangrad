@@ -20,7 +20,9 @@ Route::middleware(['auth'])->group(function () {
 
     Route::middleware(['role:super-admin'])->prefix('admin')->group(function () {
        Route::get('/users', [App\Http\Controllers\UserManagement\UserController::class, 'index'])->name('users.index');
+
        Route::get('/users/roles', [App\Http\Controllers\UserManagement\UserRolesController::class, 'index'])->name('users.roles');
+       Route::get('/users/roles/edit/{id}', [App\Http\Controllers\UserManagement\UserRolesController::class, 'edit'])->name('users.roles.edit');
     });
 
     Route::middleware(['role:member|admin|super-admin'])->prefix('admin')->group(function () {
