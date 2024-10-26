@@ -22,6 +22,7 @@
             </div>
             <div class="px-4 py-2">
                 <a href="/admin/league" class="block px-4 py-2 hover:bg-gray-100 hover:text-night cursor-pointer">Liga</a>
+                <a v-if="hasRole('super-admin')" href="/admin/users" class="block px-4 py-2 hover:bg-gray-100 hover:text-night cursor-pointer">Users</a>
                 <a href="/admin/stats" class="block px-4 py-2 hover:bg-gray-100 hover:text-night cursor-pointer">Statistika</a>
                 <a href="/admin/members" class="block px-4 py-2 hover:bg-gray-100 hover:text-night cursor-pointer">Članovi</a>
                 <a href="/blog" class="block px-4 py-2 hover:bg-gray-100 hover:text-night cursor-pointer">Blog</a>
@@ -51,7 +52,11 @@ export default {
         },
         logout() {
             document.getElementById('logout-form').submit();
-        }
+        },
+        hasRole(role) {
+            const userRole = this.user.roles[0];
+            return userRole.name === role;
+        },
     }
 }
 </script>
