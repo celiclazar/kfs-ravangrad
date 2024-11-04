@@ -1,8 +1,8 @@
 {{-- resources/views/partials/three-card-section.blade.php --}}
 <div class="m-4">
-    <div class="max-w-3xl mx-auto py-4 m-4 bg-amber-800 rounded-lg shadow-md">
+    <div class="max-w-3xl mx-auto py-4 m-4 bg-neutral-light rounded-lg shadow-md">
         <div class="flex flex-row justify-around">
-            <a href="{{ url('/week/add') }}" class="text-black hover:text-gray-800 font-medium">
+            <a href="{{ route('users.permissions') }}" class="text-black hover:text-gray-800 font-medium">
                 PERMISIJE
             </a>
             <a href="{{ route('users.roles') }}" class="text-black hover:text-gray-800 font-medium">

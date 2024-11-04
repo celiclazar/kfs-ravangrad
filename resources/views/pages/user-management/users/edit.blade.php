@@ -43,7 +43,10 @@
                         </div>
                     </div>
 
-                    <button type="submit" class="mt-4 w-full sm:w-auto bg-darkGreen text-white py-2 px-4 rounded uppercase text-sm sm:text-base">Update</button>
+                    <button type="submit"
+                            class="mt-4 w-full sm:w-auto bg-darkGreen text-white py-2 px-4 rounded uppercase text-sm sm:text-base">
+                        Update
+                    </button>
                 </form>
             </div>
         </div>
@@ -51,5 +54,5 @@
 @endsection
 
 @section('content-header')
-    @include('pages.user-management.users.partials.content-header')
+    @include('pages.user-management.partials.content-header')
 @endsection

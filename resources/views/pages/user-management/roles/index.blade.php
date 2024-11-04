@@ -24,5 +24,5 @@
 @endsection
 
 @section('content-header')
-    @include('pages.user-management.users.partials.content-header')
+    @include('pages.user-management.partials.content-header')
 @endsection

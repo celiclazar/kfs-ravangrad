@@ -19,14 +19,19 @@ Route::middleware(['auth'])->group(function () {
     })->name('home');
 
     Route::middleware(['role:super-admin'])->prefix('admin')->group(function () {
+        // USERS MANAGEMENT
        Route::get('/users', [App\Http\Controllers\UserManagement\UserController::class, 'index'])->name('users.index');
        Route::get('/users/create', [App\Http\Controllers\UserManagement\UserController::class, 'create'])->name('users.create');
        Route::post('/users/create', [App\Http\Controllers\UserManagement\UserController::class, 'store'])->name('users.store');
        Route::get('/users/edit/{id}', [App\Http\Controllers\UserManagement\UserController::class, 'edit'])->name('users.edit');
        Route::post('/users/update/{id}', [App\Http\Controllers\UserManagement\UserController::class, 'update'])->name('users.update');
 
+       // ROLES MANAGEMENT
        Route::get('/users/roles', [App\Http\Controllers\UserManagement\UserRolesController::class, 'index'])->name('users.roles');
        Route::get('/users/roles/edit/{id}', [App\Http\Controllers\UserManagement\UserRolesController::class, 'edit'])->name('users.roles.edit');
+
+       // PERMISSIONS MANAGEMENT
+        Route::get('/users/permissions', [App\Http\Controllers\UserManagement\UserPermissionsController::class, 'index'])->name('users.permissions');
     });
 
     Route::middleware(['role:member|admin|super-admin'])->prefix('admin')->group(function () {
