@@ -1,6 +1,6 @@
 <template>
-    <div class="flex flex-row h-16 justify-end font-heading text-2xl text-silver bg-darkGreen">
-        <ul class="h-full bg-darkGreen md:flex-row md:space-x-4">
+    <div class="flex flex-row h-16 justify-end font-heading text-2xl text-secondary bg-primary">
+        <ul class="h-full bg-primary md:flex-row md:space-x-4">
             <guest-links v-if="!isAuthenticated" />
             <auth-links v-else :user="user" />
         </ul>

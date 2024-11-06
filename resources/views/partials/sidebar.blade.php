@@ -1,4 +1,4 @@
-<aside class="lg:block md:w-full bg-night text-silver h-screen">
+<aside class="lg:block md:w-full bg-neutral-dark text-secondary h-screen">
     <div class="p-4">
         <h2 class="text-xl font-semibold">KFS Ravangrad</h2>
         <ul class="mt-4">

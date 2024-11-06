@@ -41,12 +41,12 @@
                             </div>
 
                             <div class="flex items-center justify-between">
-                                <button type="submit" class="w-full bg-darkGreen text-white py-2 px-4 rounded-md shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                                <button type="submit" class="w-full bg-primary text-white py-2 px-4 rounded-md shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-indigo-500">
                                     {{ __('Login') }}
                                 </button>
 
                                 @if (Route::has('password.request'))
-                                    <a class="mt-3 block text-center text-sm text-darkGreen hover:text-indigo-900" href="{{ route('password.request') }}">
+                                    <a class="mt-3 block text-center text-sm text-primary hover:text-indigo-900" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif

@@ -14,8 +14,8 @@ export default {
                     dark: '#162A23',           // Darker shade of green for accent or footer
                 },
                 secondary: {
-                    light: '#BEBFBC',          // Light silver
-                    DEFAULT: '#C7C8C5',        // Medium silver, for content areas
+                    light: '#C7C8C5',          // Light silver
+                    DEFAULT: '#BEBFBC',        // Medium silver, for content areas
                     dark: '#B5B6B3',           // Dark silver for subtle borders or backgrounds
                 },
                 neutral: {

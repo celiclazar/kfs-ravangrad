@@ -44,7 +44,7 @@
                     </div>
 
                     <button type="submit"
-                            class="mt-4 w-full sm:w-auto bg-darkGreen text-white py-2 px-4 rounded uppercase text-sm sm:text-base">
+                            class="mt-4 w-full sm:w-auto bg-primary text-white py-2 px-4 rounded uppercase text-sm sm:text-base">
                         Update
                     </button>
                 </form>
