@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div class="bg-white shadow overflow-hidden sm:rounded-lg">
+        <div class="bg-white shadow overflow-hidden rounded-lg">
             <div class="flex px-4 py-5 sm:px-6">
                 <h2 class="flex-1 text-lg font-medium text-gray-900">{{ strtoupper('List of Roles') }}</h2>
                 <a href="{{ route('users.roles.add') }}" class="flex-2 text-lg text-center">
