@@ -1,6 +1,6 @@
 {{-- resources/views/partials/three-card-section.blade.php --}}
 <div class="m-4">
-    <div class="max-w-3xl mx-auto py-4 m-4 bg-white rounded-lg shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-2 lg:px-6 py-6 bg-white rounded-lg shadow-md">
         <div class="flex flex-row justify-around">
             <a href="{{ route('users.permissions') }}" class="flex-2 text-lg text-center">
                 <img src="/icons/32/permission_32.png" alt="Add Icon" class="inline h-6 w-6 mr-1" />
