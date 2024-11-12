@@ -9,19 +9,19 @@ export default {
         extend: {
             colors: {
                 primary: {
-                    light: '#6C7F78',          // Hooker's green, for light primary use
-                    DEFAULT: '#11362A',        // Dark green, suitable for headers
-                    dark: '#162A23',           // Darker shade of green for accent or footer
+                    light: '#6C7F78',
+                    DEFAULT: '#11362A',
+                    dark: '#162A23',
                 },
                 secondary: {
-                    light: '#C7C8C5',          // Light silver
-                    DEFAULT: '#BEBFBC',        // Medium silver, for content areas
-                    dark: '#B5B6B3',           // Dark silver for subtle borders or backgrounds
+                    light: '#C7C8C5',
+                    DEFAULT: '#BEBFBC',
+                    dark: '#B5B6B3',
                 },
                 neutral: {
-                    light: '#262A29',          // Eerie black, for neutral dark backgrounds
-                    DEFAULT: '#131515',        // Slightly darker neutral, good for text or icons
-                    dark: '#0B0C0D',           // Night, darkest shade for backgrounds
+                    light: '#262A29',
+                    DEFAULT: '#131515',
+                    dark: '#0B0C0D',
                 },
                 fontFamily: {
                     heading: ['Oswald', 'sans-serif'],

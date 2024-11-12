@@ -13,8 +13,6 @@
             <div class="border-t border-gray-200 p-4">
                 <form method="POST" action="{{ route('users.update', $user->id) }}">
                     @csrf
-                    @method('PUT')
-
                     <div class="space-y-4 font-body">
                         <div class="flex flex-col">
                             <label class="text-sm sm:text-base" for="name">Name</label>
