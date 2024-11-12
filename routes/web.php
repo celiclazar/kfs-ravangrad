@@ -30,7 +30,7 @@ Route::middleware(['auth'])->group(function () {
 
        // ROLES MANAGEMENT
        Route::get('/users/roles', [App\Http\Controllers\UserManagement\UserRolesController::class, 'index'])->name('users.roles');
-       Route::get('/users/roles/add/', [App\Http\Controllers\UserManagement\UserRolesController::class, 'add'])->name('users.roles.add');
+       Route::get('/users/roles/add/', [App\Http\Controllers\UserManagement\UserRolesController::class, 'create'])->name('users.roles.add');
        Route::post('/users/roles/add/', [App\Http\Controllers\UserManagement\UserRolesController::class, 'store'])->name('users.roles.store');
        Route::get('/users/roles/edit/{id}', [App\Http\Controllers\UserManagement\UserRolesController::class, 'edit'])->name('users.roles.edit');
        Route::get('/users/roles/update/{id}', [App\Http\Controllers\UserManagement\UserRolesController::class, 'update'])->name('users.roles.update');
@@ -38,11 +38,12 @@ Route::middleware(['auth'])->group(function () {
 
        // PERMISSIONS MANAGEMENT
         Route::get('/users/permissions', [App\Http\Controllers\UserManagement\UserPermissionsController::class, 'index'])->name('users.permissions');
-        Route::get('/users/permissions/add/', [App\Http\Controllers\UserManagement\UserPermissionsController::class, 'add'])->name('users.permissions.add');
+        Route::get('/users/permissions/add/', [App\Http\Controllers\UserManagement\UserPermissionsController::class, 'create'])->name('users.permissions.add');
         Route::post('/users/permissions/add/', [App\Http\Controllers\UserManagement\UserPermissionsController::class, 'store'])->name('users.permissions.store');
         Route::get('/users/permissions/edit/{id}', [App\Http\Controllers\UserManagement\UserPermissionsController::class, 'edit'])->name('users.permissions.edit');
         Route::post('/users/permissions/update/{id}', [App\Http\Controllers\UserManagement\UserPermissionsController::class, 'update'])->name('users.permissions.update');
-        Route::post('/users/permissions/delete/{id}', [App\Http\Controllers\UserManagement\UserPermissionsController::class, 'delete'])->name('users.permissions.delete');
+        Route::get('/users/permissions/delete/{id}', [App\Http\Controllers\UserManagement\UserPermissionsController::class, 'delete'])->name('users.permissions.delete');
+        Route::post('/users/permissions/delete/{id}', [App\Http\Controllers\UserManagement\UserPermissionsController::class, 'destroy'])->name('users.permissions.destroy');
     });
 
     Route::middleware(['role:member|admin|super-admin'])->prefix('admin')->group(function () {

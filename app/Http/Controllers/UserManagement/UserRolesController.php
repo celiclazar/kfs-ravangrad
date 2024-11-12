@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Client\Response;
 use Illuminate\Http\Request;
 use Ramsey\Collection\Collection;
+use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 
 class UserRolesController extends Controller
@@ -22,8 +23,11 @@ class UserRolesController extends Controller
     public function edit(Request $request, int $id)
     {
         $role = Role::findById($id);
+        $permissions = Permission::all();
+
         return view('pages.user-management.roles.edit', [
-            'role' => $role
+            'role' => $role,
+            'permissions' => $permissions,
         ]);
     }
 }
