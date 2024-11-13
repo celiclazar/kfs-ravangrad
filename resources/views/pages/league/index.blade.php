@@ -5,7 +5,9 @@
 @endsection
 
 @section('content')
-    <div>Ovde ću izlistati sve lige (sezone) do sada</div>
+    <x-league-content-section title="Leagues">
+
+    </x-league-content-section>
 @endsection
 
 @section('content-header')

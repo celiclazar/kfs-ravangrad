@@ -49,7 +49,8 @@ Route::middleware(['auth'])->group(function () {
 
     Route::middleware(['role:member|admin|super-admin'])->prefix('admin')->group(function () {
         Route::get('/league', [App\Http\Controllers\LeagueController::class, 'index'])->name('league');
-        Route::get('/league/create', [App\Http\Controllers\LeagueController::class, 'create'])->name('league.create');
+        Route::get('/league/add', [App\Http\Controllers\LeagueController::class, 'create'])->name('league.create');
+        Route::post('/league/add', [App\Http\Controllers\LeagueController::class, 'store'])->name('league.store');
         Route::get('/league/test', [App\Http\Controllers\LeagueController::class, 'test'])->name('league.test');
     });
 });

@@ -5,9 +5,11 @@
 @endsection
 
 @section('content')
-    <div>
-        Ovo će biti deo gde se dodaju pizdarije
-    </div>
+    <x-league-content-section title="Add league">
+        <form>
+
+        </form>
+    </x-league-content-section>
 @endsection
 
 @section('content-header')
