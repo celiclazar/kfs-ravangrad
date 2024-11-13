@@ -10,7 +10,7 @@
             <div class="px-4 py-5 sm:px-6">
                 <h2 class="text-lg sm:text-xl font-medium text-gray-900">{{ __('Delete Role') }}</h2>
             </div>
-            <div class="border-t border-gray-200 p-4">
+            <div class="border-t border-gray-200 p-4 text-2xl">
                 <p>{{ __('Are you sure you want to delete the role: ') }} <strong>{{ $role->name }}</strong>?</p>
 
                 <form method="POST" action="{{ route('users.roles.destroy', $role->id) }}">
@@ -28,4 +28,8 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('content-header')
+    @include('pages.user-management.partials.content-header')
 @endsection

@@ -10,7 +10,7 @@
             <div class="px-4 py-5 sm:px-6">
                 <h2 class="text-lg sm:text-xl font-medium text-gray-900">{{ strtoupper($permission->name) }}</h2>
             </div>
-            <div class="border-t border-gray-200 p-4">
+            <div class="border-t border-gray-200 p-4 text-2xl">
                 <form method="POST" action="{{ route('users.permissions.destroy', $permission->id) }}">
                     @csrf
 
@@ -19,10 +19,14 @@
                         <p>This action is irreversible.</p>
                     </div>
 
-                    <button type="submit"
-                            class="mt-4 w-full sm:w-auto bg-primary text-white py-2 px-4 rounded uppercase text-sm sm:text-base">
-                        Delete
-                    </button>
+                    <div class="mt-4 space-x-4">
+                        <button type="submit" class="bg-red-600 text-white py-2 px-4 rounded uppercase text-sm">
+                            Confirm Delete
+                        </button>
+                        <a href="{{ route('users.permissions') }}" class="bg-gray-500 text-white py-2 px-4 rounded uppercase text-sm">
+                            Cancel
+                        </a>
+                    </div>
                 </form>
             </div>
         </div>

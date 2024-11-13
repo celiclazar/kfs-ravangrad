@@ -26,7 +26,7 @@
                             <label class="text-sm sm:text-base" for="permissions">Permissions</label>
                             <div class="space-y-2">
                                 @foreach($permissions as $permission)
-                                    <div class="flex items-center">
+                                    <div class="flex items-center text-lg">
                                         <input type="checkbox" name="permissions[]" value="{{ $permission->id }}" class="mr-2">
                                         <label for="permissions">{{ $permission->name }}</label>
                                     </div>
