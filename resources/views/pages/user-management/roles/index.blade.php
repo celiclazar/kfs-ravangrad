@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <x-content-section title="List of Roles" :addRoute="route('users.roles.add')">
+    <x-content-section title="List of Roles" :addRoute="route('users.roles.create')">
         @foreach($roles as $role)
             <div class="flex px-4 py-5 sm:px-6">
                 <div class="w-2/3 text-lg mt-2 text-gray-600">

@@ -30,11 +30,12 @@ Route::middleware(['auth'])->group(function () {
 
        // ROLES MANAGEMENT
        Route::get('/users/roles', [App\Http\Controllers\UserManagement\UserRolesController::class, 'index'])->name('users.roles');
-       Route::get('/users/roles/add/', [App\Http\Controllers\UserManagement\UserRolesController::class, 'create'])->name('users.roles.add');
+       Route::get('/users/roles/add/', [App\Http\Controllers\UserManagement\UserRolesController::class, 'create'])->name('users.roles.create');
        Route::post('/users/roles/add/', [App\Http\Controllers\UserManagement\UserRolesController::class, 'store'])->name('users.roles.store');
        Route::get('/users/roles/edit/{id}', [App\Http\Controllers\UserManagement\UserRolesController::class, 'edit'])->name('users.roles.edit');
-       Route::get('/users/roles/update/{id}', [App\Http\Controllers\UserManagement\UserRolesController::class, 'update'])->name('users.roles.update');
+       Route::post('/users/roles/update/{id}', [App\Http\Controllers\UserManagement\UserRolesController::class, 'update'])->name('users.roles.update');
        Route::get('/users/roles/delete/{id}', [App\Http\Controllers\UserManagement\UserRolesController::class, 'delete'])->name('users.roles.delete');
+       Route::post('/users/roles/delete/{id}', [App\Http\Controllers\UserManagement\UserRolesController::class, 'destroy'])->name('users.roles.destroy');
 
        // PERMISSIONS MANAGEMENT
         Route::get('/users/permissions', [App\Http\Controllers\UserManagement\UserPermissionsController::class, 'index'])->name('users.permissions');
