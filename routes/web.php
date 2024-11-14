@@ -49,7 +49,12 @@ Route::middleware(['auth'])->group(function () {
 
     Route::middleware(['role:member|admin|super-admin'])->prefix('admin')->group(function () {
         Route::get('/league', [App\Http\Controllers\LeagueController::class, 'index'])->name('league');
-        Route::get('/league/create', [App\Http\Controllers\LeagueController::class, 'create'])->name('league.create');
-        Route::get('/league/test', [App\Http\Controllers\LeagueController::class, 'test'])->name('league.test');
+        Route::get('/league/{id}', [App\Http\Controllers\LeagueController::class, 'show'])->name('league.show');
+        Route::get('/league/add', [App\Http\Controllers\LeagueController::class, 'create'])->name('league.create');
+        Route::post('/league/add', [App\Http\Controllers\LeagueController::class, 'store'])->name('league.store');
+        Route::get('/league/edit/{id}', [App\Http\Controllers\LeagueController::class, 'edit'])->name('league.edit');
+        Route::post('/league/update/{id}', [App\Http\Controllers\LeagueController::class, 'update'])->name('league.update');
+        Route::get('/league/delete/{id}', [App\Http\Controllers\LeagueController::class, 'delete'])->name('league.delete');
+        Route::post('/league/destroy/{id}', [App\Http\Controllers\LeagueController::class, 'destroy'])->name('league.destroy');
     });
 });
