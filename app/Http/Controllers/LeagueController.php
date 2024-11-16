@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\League;
 use App\Models\User;
+use App\Models\Week;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -18,12 +19,17 @@ class LeagueController extends Controller
         ]);
     }
 
-    public function show(int $id)
+    public function show(int|string $id)
     {
-        $league = League::findOrFail($id);
+        $league = League::with('weeks')->findOrFail($id);
+        $weeks = $league->weeks();
         $user = Auth::user();
 
-        return view('pages.league.show', compact('league', 'user'));
+        return view('pages.league.show', [
+            'league' => $league,
+            'weeks' => $weeks,
+            'user' => $user,
+        ]);
     }
 
     public function create()
@@ -42,7 +48,7 @@ class LeagueController extends Controller
         $league->name = $request->input('name');
         $league->save();
 
-        return view('pages.league.index');
+        return redirect()->route('league');
     }
 
     public function edit(int $id)
