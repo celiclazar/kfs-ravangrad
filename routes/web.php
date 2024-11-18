@@ -47,7 +47,7 @@ Route::middleware(['auth'])->group(function () {
         Route::post('/users/permissions/delete/{id}', [App\Http\Controllers\UserManagement\UserPermissionsController::class, 'destroy'])->name('users.permissions.destroy');
     });
 
-    Route::middleware(['role:member|admin|super-admin'])->prefix('admin')->group(function () {
+    Route::middleware(['role:admin|super-admin'])->prefix('admin')->group(function () {
         Route::get('/league', [App\Http\Controllers\LeagueController::class, 'index'])->name('league');
         Route::get('/league/add', [App\Http\Controllers\LeagueController::class, 'create'])->name('league.create');
         Route::post('/league/add', [App\Http\Controllers\LeagueController::class, 'store'])->name('league.store');
@@ -56,5 +56,16 @@ Route::middleware(['auth'])->group(function () {
         Route::post('/league/update/{id}', [App\Http\Controllers\LeagueController::class, 'update'])->name('league.update');
         Route::get('/league/delete/{id}', [App\Http\Controllers\LeagueController::class, 'delete'])->name('league.delete');
         Route::post('/league/destroy/{id}', [App\Http\Controllers\LeagueController::class, 'destroy'])->name('league.destroy');
+    });
+
+    Route::middleware(['role:admin|super-admin'])->prefix('admin/rounds')->group(function () {
+        Route::get('/add', [App\Http\Controllers\RoundController::class, 'create'])->name('round.create');
+        Route::get('/add/preview', [App\Http\Controllers\RoundController::class, 'preview'])->name('round.create.preview');
+        Route::post('/add', [App\Http\Controllers\RoundController::class, 'store'])->name('round.store');
+        Route::get('/{id}', [App\Http\Controllers\RoundController::class, 'show'])->name('round.show');
+        Route::get('/edit/{id}', [App\Http\Controllers\RoundController::class, 'edit'])->name('round.edit');
+        Route::post('/update/{id}', [App\Http\Controllers\RoundController::class, 'update'])->name('round.update');
+        Route::get('/delete/{id}', [App\Http\Controllers\RoundController::class, 'delete'])->name('round.delete');
+        Route::post('/destroy/{id}', [App\Http\Controllers\RoundController::class, 'destroy'])->name('round.destroy');
     });
 });

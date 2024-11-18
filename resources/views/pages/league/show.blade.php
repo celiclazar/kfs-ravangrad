@@ -6,22 +6,13 @@
 
 @section('content')
     <x-league-content-section title="{{ $league->name }}" :addRoute="route('league.create')" :user="$user">
-        <div class="w-full h-8 flex bg-primary-light">
+        <div class="w-full h-8 flex">
             <div class="flex-1 flex justify-center items-center">
-                <a href="{{ route('league.edit', ['id' => $league->id]) }}" class="text-white">
+                <a href="{{ route('round.create') }}" class="text-white">
                     <img src="/icons/32/add-button_32.png" alt="Add Icon" class="inline h-5 w-5 mr-1" />
                 </a>
             </div>
-            <div class="flex-1 flex justify-center items-center">
-                <a href="{{ route('league.delete', ['id' => $league->id]) }}" class="text-white">
-                    <img src="/icons/32/add-button_32.png" alt="Add Icon" class="inline h-5 w-5 mr-1" />
-                </a>
-            </div>
-            <div class="flex-1 flex justify-center items-center">
-                <a href="{{ route('league.show', ['id' => $league->id]) }}" class="text-white">
-                    <img src="/icons/32/add-button_32.png" alt="Add Icon" class="inline h-5 w-5 mr-1" />
-                </a>
-            </div>
+
         </div>
         <div class="border-t border-gray-200 p-4">
             @foreach($weeks as $week)
