@@ -8,7 +8,7 @@
     <x-league-content-section title="Add round">
         <div class="w-full h-8 flex">
             <div class="flex-1 flex px-2 ml-2 items-left">
-                <p>Upload file from Kickertool here.</p>
+
             </div>
 
         </div>
@@ -19,9 +19,9 @@
 
                 <div class="space-y-4 font-body">
                     <div class="flex flex-col">
-                        <label class="text-sm sm:text-base" for="file">Upload File</label>
+                        <label class="text-gray-500 italic text-sm sm:text-base" for="file"> .json extension file</label>
                         <input type="file" name="file" id="file"
-                               class="border rounded p-2 text-base sm:text-lg" required>
+                               class="border rounded p-2 text-base sm:text-sm" required>
                     </div>
                 </div>
 
