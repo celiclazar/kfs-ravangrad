@@ -1,5 +1,5 @@
-<aside class="lg:block md:w-full bg-neutral-dark text-secondary h-screen">
-    <div class="p-4">
+<aside class=" lg:block md:w-full ">
+    <div class="bg-neutral-dark text-secondary p-4">
         <h2 class="text-xl font-semibold">KFS Ravangrad</h2>
         <ul class="mt-4">
             <li class="py-2">

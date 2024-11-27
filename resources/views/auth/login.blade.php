@@ -16,7 +16,7 @@
                             <div class="mb-4">
                                 <label for="email" class="block text-sm font-medium text-gray-700">{{ __('Email Address') }}</label>
                                 <input id="email" type="email"
-                                       class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 @error('email') border-red-500 @enderror"
+                                       class="mt-1 bg-gray-100 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-indigo-500 @error('email') border-red-500 @enderror"
                                        name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                                 @error('email')
                                 <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
@@ -26,7 +26,7 @@
                             <div class="mb-4">
                                 <label for="password" class="block text-sm font-medium text-gray-700">{{ __('Password') }}</label>
                                 <input id="password" type="password"
-                                       class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 @error('password') border-red-500 @enderror"
+                                       class="mt-1 block w-full rounded-md bg-gray-100 border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 @error('password') border-red-500 @enderror"
                                        name="password" required autocomplete="current-password">
                                 @error('password')
                                 <p class="mt-2 text-sm text-red-600">{{ $message }}</p>

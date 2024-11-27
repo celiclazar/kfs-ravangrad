@@ -16,13 +16,13 @@
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-100 h-screen">
 <div id="app">
 
     <navbar-component :user="{{ Auth::user() ? Auth::user()->toJson() : 'null' }}"></navbar-component>
 
     <main class="flex flex-row">
-        <div class="w-full md:w-2/3 lg:1/3">
+        <div class="w-full">
             @yield('content')
         </div>
     </main>

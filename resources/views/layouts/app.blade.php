@@ -15,7 +15,7 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="bg-neutral-light">
+<body class="bg-secondary">
     <div id="app">
         <div class="flex flex-col">
             <navbar-component :user="{{ Auth::user() ? Auth::user()->toJson() : 'null' }}"></navbar-component>

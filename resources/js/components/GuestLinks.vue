@@ -3,7 +3,7 @@
         <!-- Hamburger Icon -->
         <button
             @click="isOpen = !isOpen"
-            class="block md:hidden p-2 focus:outline-none"
+            class="block p-2 focus:outline-none"
         >
             <svg
                 class="w-6 h-6 text-secondary hover:text-gray-400"
@@ -24,7 +24,7 @@
         <!-- Menu items -->
         <div
             :class="isOpen ? 'block' : 'hidden'"
-            class="flex flex-col h-screen w-48 space-y-4 md:flex-row md:space-x-4 md:space-y-0 p-2 mt-2 bg-primary"
+            class="flex flex-col h-screen w-48 space-y-4 md:space-x-4 md:space-y-0 p-2 mt-2 bg-primary"
         >
             <a href="/login" class="text-secondary hover:text-gray-400">Login</a>
             <a href="/register" class="text-secondary hover:text-gray-400">Register</a>
