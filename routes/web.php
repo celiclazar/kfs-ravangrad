@@ -60,7 +60,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::middleware(['role:admin|super-admin'])->prefix('admin/rounds')->group(function () {
         Route::get('/add', [App\Http\Controllers\RoundController::class, 'create'])->name('round.create');
-        Route::get('/add/preview', [App\Http\Controllers\RoundController::class, 'preview'])->name('round.create.preview');
+        Route::post('/add/preview', [App\Http\Controllers\RoundController::class, 'preview'])->name('round.create.preview');
         Route::post('/add', [App\Http\Controllers\RoundController::class, 'store'])->name('round.store');
         Route::get('/{id}', [App\Http\Controllers\RoundController::class, 'show'])->name('round.show');
         Route::get('/edit/{id}', [App\Http\Controllers\RoundController::class, 'edit'])->name('round.edit');
